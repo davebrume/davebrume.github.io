@@ -1,72 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Top SaaS CRM Dashboard</title>
+<meta charset="UTF-8">
+<title>Ultimate Client Portal</title>
+
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
-<div class="sidebar">
-<h2>CRM SaaS 🚀</h2>
-
-<button onclick="showSection('dashboard')">Dashboard</button>
-<button onclick="showSection('clients')">Clients</button>
-
-</div>
-
-<div class="main">
-
-<section id="dashboard">
-
-<h1>Analytics Dashboard</h1>
-
-<div class="stats">
-
 <div class="card">
-<h3>Total Clients</h3>
-<p id="totalClients">0</p>
-</div>
 
-<div class="card">
-<h3>Total Revenue</h3>
-<p id="totalRevenue">$0</p>
-</div>
+<!-- LOGIN -->
+<div id="loginBox">
 
-</div>
+<h2>Client Portal Login</h2>
 
-<canvas id="chart"></canvas>
+<input type="text" id="loginUser" placeholder="Username">
+<input type="password" id="loginPass" placeholder="Password">
 
-</section>
+<button onclick="login()">Login</button>
 
-<section id="clients" style="display:none">
+<p class="link" onclick="showRegister()">Create New Account</p>
 
-<h2>Client Management</h2>
-
-<div class="form-box">
-<input id="name" placeholder="Client Name">
-<input id="project" placeholder="Project">
-<input id="budget" type="number" placeholder="Budget">
-
-<select id="status">
-<option>Pending</option>
-<option>In Progress</option>
-<option>Completed</option>
-</select>
-
-<button onclick="addClient()">Add Client</button>
-</div>
-
-<input placeholder="Search clients..." onkeyup="searchClient(this.value)">
-
-<ul id="clientList"></ul>
-
-</section>
+<p id="msg"></p>
 
 </div>
 
-<script src="script.js"></script>
+<!-- REGISTER -->
+<div id="registerBox" style="display:none;">
+
+<h2>Create Client Account</h2>
+
+<input type="text" id="regUser" placeholder="Username">
+<input type="password" id="regPass" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p class="link" onclick="showLogin()">Back to Login</p>
+
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none; text-align:center;">
+
+<h2 id="welcome"></h2>
+
+<div class="dashBox">
+<p>✅ Client Authentication Successful</p>
+<p id="profileInfo"></p>
+</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+</div>
+
+<script src="auth.js"></script>
 
 </body>
 </html>

@@ -1,83 +1,57 @@
 body{
-margin:0;
-font-family:Arial;
-display:flex;
-background:#020617;
-color:white;
-}
-
-/* Sidebar */
-
-.sidebar{
-width:220px;
-height:100vh;
-background:#0f172a;
-padding:20px;
-}
-
-.sidebar button{
-width:100%;
-padding:12px;
-margin:10px 0;
-background:#22c55e;
-border:none;
-color:white;
-border-radius:8px;
-cursor:pointer;
-}
-
-/* Main */
-
-.main{
-flex:1;
-padding:30px;
-}
-
-.stats{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+    font-family: Arial;
+    background: linear-gradient(135deg,#020617,#0f172a);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
 }
 
 .card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-width:180px;
+    background:#1e293b;
+    padding:40px;
+    width:360px;
+    border-radius:20px;
+    box-shadow:0 25px 70px rgba(0,0,0,0.8);
 }
 
-/* Form */
-
-.form-box{
-margin:20px 0;
+h2{
+    text-align:center;
 }
 
-input, select{
-padding:10px;
-margin:5px;
-border-radius:8px;
-border:none;
+input{
+    width:100%;
+    padding:13px;
+    margin:8px 0;
+    border:none;
+    border-radius:12px;
 }
 
 button{
-padding:10px 20px;
-background:#22c55e;
-border:none;
-color:white;
-border-radius:8px;
-cursor:pointer;
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:12px;
+    background:#38bdf8;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-ul{
-list-style:none;
-padding:0;
+button:hover{
+    background:#0ea5e9;
 }
 
-li{
-background:#1e293b;
-margin:10px 0;
-padding:15px;
-border-radius:10px;
-display:flex;
-justify-content:space-between;
+.link{
+    text-align:center;
+    color:#38bdf8;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.dashBox{
+    background:#0f172a;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
 }
