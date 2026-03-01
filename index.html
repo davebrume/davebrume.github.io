@@ -1,64 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Ultimate Client Portal</title>
+    <meta charset="UTF-8">
+    <title>BusinessPro|Landing Page</title>
+    <meta name="'viewport" content="width=device-width.initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
-
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="card">
+    <!--==================NAVBAR==================-->
+   <header>
+  <div class="container navbar">
+    <h2 class="logo">FlowSync</h2>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#" class="btn">Get Started</a>
+  </div>
+</header>
 
-<!-- LOGIN -->
-<div id="loginBox">
+<section class="hero">
+  <div class="container">
+    <h1>Manage Your Team’s Work Smarter</h1>
+    <p>FlowSync helps teams collaborate, track tasks, and deliver projects faster than ever.</p>
+    <a href="#" class="btn">Start Free Trial</a>
+  </div>
+</section>
 
-<h2>Client Portal Login</h2>
+<section class="section">
+  <div class="container dashboard-preview">
+    <div class="dashboard">
+      <div class="sidebar">
+        <p>Dashboard</p>
+        <p>Projects</p>
+        <p>Analytics</p>
+        <p>Settings</p>
+      </div>
+      <div class="main">
+        <div class="stat-card">Revenue: $12,430</div>
+        <div class="stat-card">Active Users: 1,284</div>
+        <div class="stat-card">Tasks Completed: 342</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<input type="text" id="loginUser" placeholder="Username">
-<input type="password" id="loginPass" placeholder="Password">
+<section id="features" class="section">
+  <div class="container">
+    <h2>Powerful Features</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Task Management</h3>
+        <p>Organize projects with powerful and simple task tracking tools.</p>
+      </div>
+      <div class="card">
+        <h3>Real-Time Collaboration</h3>
+        <p>Work with your team seamlessly in real-time from anywhere.</p>
+      </div>
+      <div class="card">
+        <h3>Analytics Dashboard</h3>
+        <p>Track performance and productivity with smart analytics.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<button onclick="login()">Login</button>
+<section id="pricing" class="section">
+  <div class="container">
+    <h2>Simple Pricing</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Starter</h3>
+        <p><strong>$9/month</strong></p>
+        <p>Perfect for small teams.</p>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <p><strong>$29/month</strong></p>
+        <p>For growing businesses.</p>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+      <div class="card">
+        <h3>Enterprise</h3>
+        <p><strong>Custom</strong></p>
+        <p>Advanced features & support.</p>
+        <a href="#" class="btn">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p class="link" onclick="showRegister()">Create New Account</p>
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
 
-<p id="msg"></p>
-
-</div>
-
-<!-- REGISTER -->
-<div id="registerBox" style="display:none;">
-
-<h2>Create Client Account</h2>
-
-<input type="text" id="regUser" placeholder="Username">
-<input type="password" id="regPass" placeholder="Password">
-
-<button onclick="register()">Register</button>
-
-<p class="link" onclick="showLogin()">Back to Login</p>
-
-</div>
-
-<!-- DASHBOARD -->
-<div id="dashboard" style="display:none; text-align:center;">
-
-<h2 id="welcome"></h2>
-
-<div class="dashBox">
-<p>✅ Client Authentication Successful</p>
-<p id="profileInfo"></p>
-</div>
-
-<button onclick="logout()">Logout</button>
-
-</div>
-
-</div>
-
-<script src="auth.js"></script>
-
+<footer>
+  <div class="container">
+    <p>© 2026 FlowSync. All rights reserved.</p>
+  </div>
+</footer>
+  
+    <!--JS-->
+    <script src="script.js"></script>
+    
 </body>
 </html>
