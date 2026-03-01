@@ -68,3 +68,19 @@ cursor:pointer;
 background:linear-gradient(45deg,#7c3aed,#38bdf8);
 color:white;
 }
+
+.demo-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+border-radius:12px;
+background:linear-gradient(45deg,#7c3aed,#38bdf8);
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.demo-btn:hover{
+transform:scale(1.05);
+}
