@@ -1,46 +1,127 @@
-// Theme Toggle
-const toggle = document.getElementById("themeToggle");
+let clients = JSON.parse(localStorage.getItem("clients")) || [];
 
-toggle.onclick = () => {
-document.body.classList.toggle("light-mode");
+let chart;
 
-if(document.body.classList.contains("light-mode")){
-document.body.style.background="#f8fafc";
-document.body.style.color="black";
-toggle.textContent="☀️";
-}else{
-document.body.style.background="";
-document.body.style.color="white";
-toggle.textContent="🌙";
-}
-};
-
-// Typing Animation
-const text = ["Frontend Developer","SaaS Builder","Tech Innovator"];
-let index = 0;
-let charIndex = 0;
-
-const typing = document.getElementById("typing");
-
-function type(){
-if(charIndex < text[index].length){
-typing.textContent += text[index][charIndex];
-charIndex++;
-setTimeout(type,100);
-}else{
-setTimeout(deleteText,1500);
-}
+function saveData(){
+localStorage.setItem("clients", JSON.stringify(clients));
 }
 
-function deleteText(){
-if(charIndex > 0){
-typing.textContent = text[index].substring(0,charIndex-1);
-charIndex--;
-setTimeout(deleteText,50);
-}else{
-index = (index + 1) % text.length;
-setTimeout(type,500);
+function showSection(id){
+
+document.getElementById("dashboard").style.display="none";
+document.getElementById("clients").style.display="none";
+
+document.getElementById(id).style.display="block";
+}
+
+function renderClients(list = clients){
+
+let ul = document.getElementById("clientList");
+ul.innerHTML="";
+
+list.forEach((client,index)=>{
+
+ul.innerHTML += `
+<li>
+<div>
+<strong>${client.name}</strong><br>
+${client.project}<br>
+$${client.budget} | ${client.status}
+</div>
+
+<div>
+<button onclick="editClient(${index})">Edit</button>
+<button onclick="deleteClient(${index})">Delete</button>
+</div>
+</li>
+`;
+
+});
+
+updateStats();
+updateChart();
+}
+
+function addClient(){
+
+let name = document.getElementById("name").value;
+let project = document.getElementById("project").value;
+let budget = document.getElementById("budget").value;
+let status = document.getElementById("status").value;
+
+if(!name || !project || !budget){
+alert("Fill all fields");
+return;
+}
+
+clients.push({name,project,budget,status});
+
+saveData();
+renderClients();
+
+}
+
+function deleteClient(index){
+clients.splice(index,1);
+saveData();
+renderClients();
+}
+
+function editClient(index){
+
+let c = clients[index];
+
+let name = prompt("Name",c.name);
+let project = prompt("Project",c.project);
+let budget = prompt("Budget",c.budget);
+let status = prompt("Status",c.status);
+
+if(name && project && budget && status){
+clients[index]={name,project,budget,status};
+saveData();
+renderClients();
 }
 }
 
-type();
+function searchClient(query){
+
+let filtered = clients.filter(c =>
+c.name.toLowerCase().includes(query.toLowerCase())
+);
+
+renderClients(filtered);
+}
+
+function updateStats(){
+
+document.getElementById("totalClients").innerText = clients.length;
+
+let totalRevenue = clients.reduce((sum,c)=>{
+return sum + Number(c.budget);
+},0);
+
+document.getElementById("totalRevenue").innerText = "$"+totalRevenue;
+}
+
+function updateChart(){
+
+let labels = clients.map(c=>c.name);
+let data = clients.map(c=>Number(c.budget));
+
+if(chart) chart.destroy();
+
+let ctx = document.getElementById("chart");
+
+chart = new Chart(ctx,{
+type:"line",
+data:{
+labels:labels,
+datasets:[{
+label:"Revenue Growth",
+data:data
+}]
+}
+});
+}
+
+renderClients();

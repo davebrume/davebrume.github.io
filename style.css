@@ -1,86 +1,83 @@
 body{
 margin:0;
-font-family:Segoe UI;
-background:radial-gradient(circle at top,#020617,#0f172a);
-color:white;
-overflow-x:hidden;
-transition:0.5s;
-}
-
-nav{
+font-family:Arial;
 display:flex;
-justify-content:space-between;
-padding:20px 8%;
-backdrop-filter:blur(20px);
-position:sticky;
-top:0;
-z-index:100;
+background:#020617;
+color:white;
 }
 
-.hero{
-text-align:center;
-padding:140px 10%;
+/* Sidebar */
+
+.sidebar{
+width:220px;
+height:100vh;
+background:#0f172a;
+padding:20px;
 }
 
-.gradient{
-background:linear-gradient(45deg,#7c3aed,#38bdf8);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.sidebar button{
+width:100%;
+padding:12px;
+margin:10px 0;
+background:#22c55e;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
 }
 
-.section-title{
-text-align:center;
-margin-bottom:50px;
+/* Main */
+
+.main{
+flex:1;
+padding:30px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-padding:0 10% 100px;
+.stats{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .card{
-padding:35px;
-border-radius:30px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(30px);
-border:1px solid rgba(255,255,255,0.1);
-transition:0.6s;
-transform-style:preserve-3d;
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+width:180px;
 }
 
-.card:hover{
-transform:translateY(-20px) rotateX(5deg);
-border-color:#7c3aed;
+/* Form */
+
+.form-box{
+margin:20px 0;
 }
 
-.contact{
-text-align:center;
-padding:80px;
+input, select{
+padding:10px;
+margin:5px;
+border-radius:8px;
+border:none;
 }
 
 button{
-padding:10px 18px;
+padding:10px 20px;
+background:#22c55e;
 border:none;
-border-radius:12px;
+color:white;
+border-radius:8px;
 cursor:pointer;
-background:linear-gradient(45deg,#7c3aed,#38bdf8);
-color:white;
 }
 
-.demo-btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 20px;
-border-radius:12px;
-background:linear-gradient(45deg,#7c3aed,#38bdf8);
-color:white;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+ul{
+list-style:none;
+padding:0;
 }
 
-.demo-btn:hover{
-transform:scale(1.05);
+li{
+background:#1e293b;
+margin:10px 0;
+padding:15px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
 }

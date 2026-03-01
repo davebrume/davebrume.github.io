@@ -1,82 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>David | Premium Portfolio</title>
+<title>Top SaaS CRM Dashboard</title>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<nav>
-<h2>David Tech</h2>
-<button id="themeToggle">🌙</button>
-</nav>
+<div class="sidebar">
+<h2>CRM SaaS 🚀</h2>
 
-<section class="hero">
-<h1>Hi, I'm <span class="gradient">Ebrume Omamoke David</span></h1>
-<h2 id="typing"></h2>
-<p>Building Future SaaS Experiences</p>
+<button onclick="showSection('dashboard')">Dashboard</button>
+<button onclick="showSection('clients')">Clients</button>
+
+</div>
+
+<div class="main">
+
+<section id="dashboard">
+
+<h1>Analytics Dashboard</h1>
+
+<div class="stats">
+
+<div class="card">
+<h3>Total Clients</h3>
+<p id="totalClients">0</p>
+</div>
+
+<div class="card">
+<h3>Total Revenue</h3>
+<p id="totalRevenue">$0</p>
+</div>
+
+</div>
+
+<canvas id="chart"></canvas>
+
 </section>
 
-<section class="projects">
-<h2 class="section-title">🚀 My Projects</h2>
+<section id="clients" style="display:none">
 
-<div class="grid">
+<h2>Client Management</h2>
 
-<div class="card" id="ai-dashboard">
-<img src="ai-dashboard.png" class="project-img">
-<h3>🤖 AI Advanced SaaS Dashboard</h3>
-<p>AI analytics business dashboard UI.</p>
-<span>HTML • CSS • JavaScript</span>
-<a href="#ai-dashboard" class="demo-btn">Live demo</a>
+<div class="form-box">
+<input id="name" placeholder="Client Name">
+<input id="project" placeholder="Project">
+<input id="budget" type="number" placeholder="Budget">
+
+<select id="status">
+<option>Pending</option>
+<option>In Progress</option>
+<option>Completed</option>
+</select>
+
+<button onclick="addClient()">Add Client</button>
 </div>
 
-<div class="card" id="analytics-dashboard">
-<img src="analytics-dashboard.png" class="project-img">
-<h3>📊 Business Analytics Dashboard</h3>
-<p>Data visualization interface.</p>
-<span>HTML • CSS • JavaScript</span>
-<a href="#analytics-dashboard" class="demo-btn">Live Demo</a>
-</div>
+<input placeholder="Search clients..." onkeyup="searchClient(this.value)">
 
-<div class="card" id="landing-page">
-<h3>🏢 BusinessPro Landing Page</h3>
-<img src="landing-page.png" class="project-img">
-<p>Marketing conversion landing page.</p>
-<span>HTML • CSS • JavaScript</span>
-<a href="#landing-page" class="demo-btn">Live Demo</a>
-</div>
+<ul id="clientList"></ul>
 
-<div class="card" id="auth-system">
-<img src="auth-system.png" class="project-img">
-<h3>🔐 Authentication System</h3>
-<p>Client login/signup UI flow.</p>
-<span>HTML • CSS • JavaScript</span>
-<a href="#auth-system" class="demo-btn">Live Demo</a>
-</div>
-
-<div class="card" id="saas-dashboard">
-<img src="saas-dashboard.png" class="project-img">
-<h3>💼 Freelance SaaS Dashboard</h3>
-<p>Client management SaaS UI.</p>
-<span>HTML • CSS • JavaScript</span>
-<a href="#saas-dashboard" class="demo-btn">Live Demo</a>
-</div>
-
-</div>
 </section>
 
-<section class="contact">
-<h2>📧 Contact</h2>
-<p>david.ebrume@gmail.com</p>
-</section>
-
-<footer>
-© 2026 Ebrume Omamoke David
-</footer>
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
