@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI SaaS Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- Sidebar -->
+<div class="sidebar">
+<h2>🤖 AI SaaS</h2>
+
+<ul>
+<li onclick="showTab('overview')">Dashboard</li>
+<li onclick="showTab('automation')">Automation</li>
+<li onclick="showTab('analytics')">Analytics</li>
+<li onclick="showTab('clients')">Clients</li>
+<li onclick="showTab('settings')">Settings</li>
+</ul>
+
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+<h1>Enterprise AI Dashboard</h1>
+
+<!-- Tabs -->
+
+<div id="overview" class="tab active">
+
+<div class="cards">
+
+<div class="card">
+<h3>Revenue</h3>
+<p>$42,300</p>
+</div>
+
+<div class="card">
+<h3>Users</h3>
+<p>2,104</p>
+</div>
+
+<div class="card">
+<h3>Automation Rate</h3>
+<p>99%</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Automation Tab -->
+
+<div id="automation" class="tab">
+
+<h2>🤖 AI Automation Engine</h2>
+
+<input id="taskInput" placeholder="Enter automation task">
+
+<button onclick="runAI()">Run AI Automation</button>
+
+<div id="logBox" class="log-box"></div>
+
+</div>
+
+<!-- Analytics Tab -->
+
+<div id="analytics" class="tab">
+
+<h2>📊 Business Analytics</h2>
+
+<p>Business insights simulation</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Sales Growth</h3>
+<p>+12%</p>
+</div>
+
+<div class="card">
+<h3>Customer Retention</h3>
+<p>91%</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Clients Tab -->
+
+<div id="clients" class="tab">
+<h2>👥 Client Management</h2>
+<p>Client workflow automation simulation</p>
+</div>
+
+<!-- Settings Tab -->
+
+<div id="settings" class="tab">
+<h2>⚙ Settings</h2>
+<p>System configuration panel</p>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

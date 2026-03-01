@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Business Analytics Dashboard V4</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<div class="topbar">
+<h2>🌌 AI Business Intelligence Platform</h2>
+<button onclick="refreshData()">Run Analysis</button>
+</div>
+
+<div class="kpi-grid">
+
+<div class="kpi-card">
+<h3>Revenue</h3>
+<h1 id="revenue">$0</h1>
+</div>
+
+<div class="kpi-card">
+<h3>Users</h3>
+<h1 id="users">0</h1>
+</div>
+
+<div class="kpi-card">
+<h3>Orders</h3>
+<h1 id="orders">0</h1>
+</div>
+
+<div class="kpi-card">
+<h3>Performance Score</h3>
+<h1 id="score">0%</h1>
+</div>
+
+</div>
+
+<div class="charts">
+
+<div class="chart-box">
+<canvas id="salesChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="userChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="marketChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="profitChart"></canvas>
+</div>
+
+</div>
+
+<div class="ai-panel">
+<h2>🤖 AI Business Advisor</h2>
+<p id="aiText"></p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

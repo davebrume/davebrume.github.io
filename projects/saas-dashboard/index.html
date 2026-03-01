@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Top SaaS CRM Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>CRM SaaS 🚀</h2>
+
+<button onclick="showSection('dashboard')">Dashboard</button>
+<button onclick="showSection('clients')">Clients</button>
+
+</div>
+
+<div class="main">
+
+<section id="dashboard">
+
+<h1>Analytics Dashboard</h1>
+
+<div class="stats">
+
+<div class="card">
+<h3>Total Clients</h3>
+<p id="totalClients">0</p>
+</div>
+
+<div class="card">
+<h3>Total Revenue</h3>
+<p id="totalRevenue">$0</p>
+</div>
+
+</div>
+
+<canvas id="chart"></canvas>
+
+</section>
+
+<section id="clients" style="display:none">
+
+<h2>Client Management</h2>
+
+<div class="form-box">
+<input id="name" placeholder="Client Name">
+<input id="project" placeholder="Project">
+<input id="budget" type="number" placeholder="Budget">
+
+<select id="status">
+<option>Pending</option>
+<option>In Progress</option>
+<option>Completed</option>
+</select>
+
+<button onclick="addClient()">Add Client</button>
+</div>
+
+<input placeholder="Search clients..." onkeyup="searchClient(this.value)">
+
+<ul id="clientList"></ul>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

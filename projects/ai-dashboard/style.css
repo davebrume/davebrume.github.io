@@ -1,0 +1,96 @@
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+color:white;
+}
+
+.dashboard{
+display:flex;
+height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:220px;
+padding:20px;
+background:rgba(0,0,0,0.5);
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar li{
+padding:15px 0;
+cursor:pointer;
+}
+
+/* Main */
+
+.main{
+flex:1;
+padding:40px;
+}
+
+.cards{
+display:flex;
+gap:20px;
+}
+
+.card{
+flex:1;
+padding:25px;
+border-radius:15px;
+background:rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+}
+
+/* Tabs */
+
+.tab{
+display:none;
+}
+
+.tab.active{
+display:block;
+}
+
+/* Inputs */
+
+input{
+padding:12px;
+width:60%;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:10px;
+background:#00c6ff;
+color:white;
+cursor:pointer;
+margin-left:10px;
+}
+
+/* Logs */
+
+.log-box{
+margin-top:20px;
+height:200px;
+overflow-y:auto;
+background:rgba(0,0,0,0.4);
+padding:15px;
+border-radius:15px;
+}
+
+.log{
+background:#00c6ff;
+padding:10px;
+margin:8px 0;
+border-radius:10px;
+}

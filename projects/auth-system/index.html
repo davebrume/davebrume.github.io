@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ultimate Client Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<!-- LOGIN -->
+<div id="loginBox">
+
+<h2>Client Portal Login</h2>
+
+<input type="text" id="loginUser" placeholder="Username">
+<input type="password" id="loginPass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p class="link" onclick="showRegister()">Create New Account</p>
+
+<p id="msg"></p>
+
+</div>
+
+<!-- REGISTER -->
+<div id="registerBox" style="display:none;">
+
+<h2>Create Client Account</h2>
+
+<input type="text" id="regUser" placeholder="Username">
+<input type="password" id="regPass" placeholder="Password">
+
+<button onclick="register()">Register</button>
+
+<p class="link" onclick="showLogin()">Back to Login</p>
+
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none; text-align:center;">
+
+<h2 id="welcome"></h2>
+
+<div class="dashBox">
+<p>✅ Client Authentication Successful</p>
+<p id="profileInfo"></p>
+</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>
