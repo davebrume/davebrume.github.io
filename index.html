@@ -2,74 +2,114 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Business Analytics Dashboard V4</title>
-
+<title>AI SaaS Dashboard</title>
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
 
 <body>
 
 <div class="dashboard">
 
-<div class="topbar">
-<h2>🌌 AI Business Intelligence Platform</h2>
-<button onclick="refreshData()">Run Analysis</button>
+<!-- Sidebar -->
+<div class="sidebar">
+<h2>🤖 AI SaaS</h2>
+
+<ul>
+<li onclick="showTab('overview')">Dashboard</li>
+<li onclick="showTab('automation')">Automation</li>
+<li onclick="showTab('analytics')">Analytics</li>
+<li onclick="showTab('clients')">Clients</li>
+<li onclick="showTab('settings')">Settings</li>
+</ul>
+
 </div>
 
-<div class="kpi-grid">
+<!-- Main Content -->
+<div class="main">
 
-<div class="kpi-card">
+<h1>Enterprise AI Dashboard</h1>
+
+<!-- Tabs -->
+
+<div id="overview" class="tab active">
+
+<div class="cards">
+
+<div class="card">
 <h3>Revenue</h3>
-<h1 id="revenue">$0</h1>
+<p>$42,300</p>
 </div>
 
-<div class="kpi-card">
+<div class="card">
 <h3>Users</h3>
-<h1 id="users">0</h1>
+<p>2,104</p>
 </div>
 
-<div class="kpi-card">
-<h3>Orders</h3>
-<h1 id="orders">0</h1>
-</div>
-
-<div class="kpi-card">
-<h3>Performance Score</h3>
-<h1 id="score">0%</h1>
+<div class="card">
+<h3>Automation Rate</h3>
+<p>99%</p>
 </div>
 
 </div>
 
-<div class="charts">
-
-<div class="chart-box">
-<canvas id="salesChart"></canvas>
 </div>
 
-<div class="chart-box">
-<canvas id="userChart"></canvas>
-</div>
+<!-- Automation Tab -->
 
-<div class="chart-box">
-<canvas id="marketChart"></canvas>
-</div>
+<div id="automation" class="tab">
 
-<div class="chart-box">
-<canvas id="profitChart"></canvas>
-</div>
+<h2>🤖 AI Automation Engine</h2>
+
+<input id="taskInput" placeholder="Enter automation task">
+
+<button onclick="runAI()">Run AI Automation</button>
+
+<div id="logBox" class="log-box"></div>
 
 </div>
 
-<div class="ai-panel">
-<h2>🤖 AI Business Advisor</h2>
-<p id="aiText"></p>
+<!-- Analytics Tab -->
+
+<div id="analytics" class="tab">
+
+<h2>📊 Business Analytics</h2>
+
+<p>Business insights simulation</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Sales Growth</h3>
+<p>+12%</p>
+</div>
+
+<div class="card">
+<h3>Customer Retention</h3>
+<p>91%</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Clients Tab -->
+
+<div id="clients" class="tab">
+<h2>👥 Client Management</h2>
+<p>Client workflow automation simulation</p>
+</div>
+
+<!-- Settings Tab -->
+
+<div id="settings" class="tab">
+<h2>⚙ Settings</h2>
+<p>System configuration panel</p>
+</div>
+
 </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
