@@ -1,120 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BusinessPro|Landing Page</title>
-    <meta name="'viewport" content="width=device-width.initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Business Analytics Dashboard V4</title>
 
-    <!--CSS-->
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body>
 
-    <!--==================NAVBAR==================-->
-   <header>
-  <div class="container navbar">
-    <h2 class="logo">FlowSync</h2>
-    <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#" class="btn">Get Started</a>
-  </div>
-</header>
+<div class="dashboard">
 
-<section class="hero">
-  <div class="container">
-    <h1>Manage Your Team’s Work Smarter</h1>
-    <p>FlowSync helps teams collaborate, track tasks, and deliver projects faster than ever.</p>
-    <a href="#" class="btn">Start Free Trial</a>
-  </div>
-</section>
+<div class="topbar">
+<h2>🌌 AI Business Intelligence Platform</h2>
+<button onclick="refreshData()">Run Analysis</button>
+</div>
 
-<section class="section">
-  <div class="container dashboard-preview">
-    <div class="dashboard">
-      <div class="sidebar">
-        <p>Dashboard</p>
-        <p>Projects</p>
-        <p>Analytics</p>
-        <p>Settings</p>
-      </div>
-      <div class="main">
-        <div class="stat-card">Revenue: $12,430</div>
-        <div class="stat-card">Active Users: 1,284</div>
-        <div class="stat-card">Tasks Completed: 342</div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="kpi-grid">
 
-<section id="features" class="section">
-  <div class="container">
-    <h2>Powerful Features</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Task Management</h3>
-        <p>Organize projects with powerful and simple task tracking tools.</p>
-      </div>
-      <div class="card">
-        <h3>Real-Time Collaboration</h3>
-        <p>Work with your team seamlessly in real-time from anywhere.</p>
-      </div>
-      <div class="card">
-        <h3>Analytics Dashboard</h3>
-        <p>Track performance and productivity with smart analytics.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="kpi-card">
+<h3>Revenue</h3>
+<h1 id="revenue">$0</h1>
+</div>
 
-<section id="pricing" class="section">
-  <div class="container">
-    <h2>Simple Pricing</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Starter</h3>
-        <p><strong>$9/month</strong></p>
-        <p>Perfect for small teams.</p>
-        <a href="#" class="btn">Choose Plan</a>
-      </div>
-      <div class="card">
-        <h3>Pro</h3>
-        <p><strong>$29/month</strong></p>
-        <p>For growing businesses.</p>
-        <a href="#" class="btn">Choose Plan</a>
-      </div>
-      <div class="card">
-        <h3>Enterprise</h3>
-        <p><strong>Custom</strong></p>
-        <p>Advanced features & support.</p>
-        <a href="#" class="btn">Contact Sales</a>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="kpi-card">
+<h3>Users</h3>
+<h1 id="users">0</h1>
+</div>
 
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-</section>
+<div class="kpi-card">
+<h3>Orders</h3>
+<h1 id="orders">0</h1>
+</div>
 
-<footer>
-  <div class="container">
-    <p>© 2026 FlowSync. All rights reserved.</p>
-  </div>
-</footer>
-  
-    <!--JS-->
-    <script src="script.js"></script>
-    
+<div class="kpi-card">
+<h3>Performance Score</h3>
+<h1 id="score">0%</h1>
+</div>
+
+</div>
+
+<div class="charts">
+
+<div class="chart-box">
+<canvas id="salesChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="userChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="marketChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="profitChart"></canvas>
+</div>
+
+</div>
+
+<div class="ai-panel">
+<h2>🤖 AI Business Advisor</h2>
+<p id="aiText"></p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
