@@ -31,6 +31,7 @@ JavaScript
 GitHub Pages Deployment
 
 **📬 Contact:**
+Feel free to reach out for collaborations or project inquiries:
 📧 Email: david.ebrume@gmail.com
 
 **🎯 Career Interests**
